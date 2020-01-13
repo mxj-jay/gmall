@@ -12,3 +12,6 @@ gmall-service-util service层通用的工具、框架
 
 gmall-web-util web层通用的工具、框架
 
+gmall-manage-service用户服务的service层8071
+
+gmall-manage-web用户服务的web层8081
