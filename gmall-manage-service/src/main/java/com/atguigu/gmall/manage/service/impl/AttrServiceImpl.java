@@ -6,6 +6,7 @@ import com.atguigu.gmall.bean.PmsBaseAttrValue;
 import com.atguigu.gmall.bean.PmsBaseSaleAttr;
 import com.atguigu.gmall.manage.mapper.PmsBaseAttrInfoMapper;
 import com.atguigu.gmall.manage.mapper.PmsBaseAttrValueMapper;
+import com.atguigu.gmall.manage.mapper.PmsBaseSaleAttrMapper;
 import com.atguigu.gmall.service.AttrService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ public class AttrServiceImpl implements AttrService {
     PmsBaseAttrInfoMapper pmsBaseAttrInfoMapper;
     @Autowired
     PmsBaseAttrValueMapper pmsBaseAttrValueMapper;
+    @Autowired
+    PmsBaseSaleAttrMapper pmsBaseSaleAttrMapper;
 
     @Override
     public List<PmsBaseAttrInfo> attrInfoList(String catalog3Id) {
@@ -84,6 +87,6 @@ public class AttrServiceImpl implements AttrService {
 
     @Override
     public List<PmsBaseSaleAttr> baseSaleAttrList() {
-        return null;
+        return pmsBaseSaleAttrMapper.selectAll();
     }
 }
